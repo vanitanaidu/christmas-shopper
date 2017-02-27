@@ -1,6 +1,5 @@
-user1 = User.create(:username => "skittles123", :email => "skittles@gmail.com", :password => "iluvskittles")
+user1 = User.create(:username => "Ilovelife", :email => "lovinglife@gmail.com", :password => "iamlivingit")
 
-user2 = User.create(:username => "flatiron4lyfe", :email => "flatiron4@hotmail.com", :password => "Rubie!")
+user2 = User.create(:username => "maryjane", :email => "mj@hotmail.com", :password => "isthatme?")
 
-user3 = User.create(:username => "kittens1265", :email => "kittens@gmail.com", :password => "crazycatlady")
-
+user3 = User.create(:username => "mssanta225", :email => "santa@gmail.com", :password => "givinggifts3454")
