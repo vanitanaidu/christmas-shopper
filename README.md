@@ -74,3 +74,4 @@ We'll send an email to you soon to schedule a pairing process. If you don't hear
 - There's nothing you can do to instantly fail or blow it.
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/sinatra-cms-app-assessment'>Sinatra Assessment</a> on Learn.co and start learning to code for free.</p>
+# Sinatra-Christmas-Shopper
