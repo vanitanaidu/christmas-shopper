@@ -2,5 +2,4 @@ class GiftsController < ApplicationController
 
 
 
-
 end

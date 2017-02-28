@@ -1,5 +1,5 @@
-user1 = User.create(:username => "Ilovelife", :email => "lovinglife@gmail.com", :password => "iamlivingit")
+gift1 = Gift.create(:name => "photoframe", :where_to_buy => "amazon", :recipient => "mum")
 
-user2 = User.create(:username => "maryjane", :email => "mj@hotmail.com", :password => "isthatme?")
+gift2 = Gift.create(:name => "toy", :where_to_buy => "macys", :recipient => "riyan")
 
-user3 = User.create(:username => "mssanta225", :email => "santa@gmail.com", :password => "givinggifts3454")
+gift3 = Gift.create(:name => "hat", :where_to_buy => "jcrew", :recipient => "dad")
