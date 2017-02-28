@@ -1,0 +1,15 @@
+<h1>Gifts</h1>
+<h2> <%= @gift.name %> </h2>
+<h2> <%= @gift.name %> </h2>
+<h2> <%= @gift.name %> </h2>
+
+
+  <form action="/gifts/<%=@gift.id%>/edit" method="get">
+    <input type="submit" value="Edit">
+  </form>
+
+  <form action="/gifts/<%= @gift.id%/delete>" method="POST">
+    <input type="hidden" id="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Gift">
+  </form>
+

@@ -63,7 +63,6 @@ class GiftsController < ApplicationController
 
 
   post "/gifts/:id/delete" do
-    binding.pry
     if logged_in?
       @gift = Gift.delete(params[:id])
       redirect to '/gifts'
