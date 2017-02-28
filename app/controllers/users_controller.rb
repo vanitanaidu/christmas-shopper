@@ -9,7 +9,6 @@ class UsersController < ApplicationController
     end
   end
 
-
     post "/signup" do
       if params[:username].empty? || params[:email].empty? || params[:password].empty?
         redirect to "/signup"
