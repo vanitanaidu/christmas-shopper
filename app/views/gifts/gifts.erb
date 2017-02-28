@@ -2,8 +2,8 @@ Welcome, <%= current_user.username %>
 <h1> Gifts</h1>
 
 
-<% @gifts.each do |gift| %>
-    Gifts<%=gift.id%>:
+<% @gifts.each.with_index(1) do |gift, index| %>
+    Gift <%=index%>:
     <%= gift.name %>
     <%= gift.where_to_buy %>
     <%= gift.recipient %>

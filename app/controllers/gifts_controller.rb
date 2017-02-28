@@ -29,9 +29,10 @@ class GiftsController < ApplicationController
   end
 
   get "/gifts/:id" do
-    # binding.pry
+
     if logged_in?
-      @gift = Gift.find_by_id(session[:user_id])
+      # binding.pry
+      @gift = Gift.find_by_id(params[:id])
       erb :"gifts/show_gift"
     else
       redirect to "/login"

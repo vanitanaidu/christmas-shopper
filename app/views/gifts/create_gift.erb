@@ -1,16 +1,27 @@
-<h1>Your shopping list for gifts!</h1>
+<html>
 
-<form method="post" action="/gifts">
+  <head>
 
-  <label for="name">What's the gift? </label>
-  <input type="text" id="name" name="name">
+    <h1>Your shopping list for gifts!</h1>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+  </head>
 
-  <label for="where_to_buy">Where to buy? </label>
-  <input type="text" id="where_to_buy" name="where_to_buy">
+  <body>
+      <form method="post" action="/gifts">
 
-  <label for="recipient">Who's getting it?</label>
-  <input type="text" id="recipient" name="recipient">
+        <label for="name">What's the gift? </label>
+        <input type="text" id="name" name="name" size="25" placeholder='name'>
 
-    <input type="submit" value="submit">
+        <label for="where_to_buy">Where to buy? </label>
+        <input type="text" id="where_to_buy" name="where_to_buy" size="25" placeholder='storename or website link'>
 
-</form>
+        <label for="recipient">Who's getting it?</label>
+        <input type="text" id="recipient" name="recipient" placeholder='recipient'>
+
+          <input type="submit" value="submit">
+
+    </form>
+
+  </body>
+
+ </html>
