@@ -1,8 +1,16 @@
+
+<head>
+    <h4>Welcome, <%= current_user.username.capitalize %></h4>
+    <h2>Your Gift</h2>
+<br>
+</head>
+
 <body>
 
 <h3>Gift Name: <%= @gift.name.capitalize %> </h3>
 <h3>Buy From: <%= @gift.where_to_buy.capitalize %> </h3>
 <h3>Recipient: <%= @gift.recipient.capitalize %> </h3>
+<h3> Notes: <%= @gift.notes %> </h3>
 
 
 <form action="/gifts/new" method="get">

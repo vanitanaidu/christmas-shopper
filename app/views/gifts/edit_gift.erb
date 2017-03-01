@@ -1,5 +1,9 @@
 
-
+<head>
+    <h4>Welcome, <%= current_user.username.capitalize %></h4>
+    <h2>Edit</h2>
+<br>
+</head>
 <form action="/gifts/<%=@gift.id%>" method="post">
 <input id="hidden" type="hidden" name="_method" value="patch">
 
@@ -11,6 +15,9 @@
 
 <label for="recipient">Who's getting it?</label>
 <input type="text" id="recipient" name="recipient" value="<%= @gift.recipient %>">
+
+  <textarea name="notes" rows="10" cols="50" placeholder="Notes"></textarea>
+
 
   <input type="submit" value="Make the change">
 </form>

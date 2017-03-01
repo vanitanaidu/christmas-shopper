@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20170227041823) do
     t.string  "name"
     t.string  "where_to_buy"
     t.string  "recipient"
+    t.string  "notes"
     t.integer "user_id"
   end
 

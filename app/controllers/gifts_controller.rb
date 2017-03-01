@@ -19,7 +19,7 @@ class GiftsController < ApplicationController
 
   post "/gifts" do
     if !params[:name].empty?
-      @gift = Gift.create(name: params[:name], where_to_buy: params[:where_to_buy], recipient: params[:recipient])
+      @gift = Gift.create(name: params[:name], where_to_buy: params[:where_to_buy], recipient: params[:recipient], notes: params[:notes])
       @gift.user_id = session[:user_id]
       @gift.save
       redirect to "/gifts/#{@gift.id}"
@@ -54,6 +54,7 @@ class GiftsController < ApplicationController
      @gift.name = params[:name]
      @gift.where_to_buy = params[:where_to_buy]
      @gift.recipient = params[:recipient]
+     @gift.notes = params[:notes]
      @gift.user_id = session[:user_id]
      @gift.save
      redirect "/gifts/#{@gift.id}"

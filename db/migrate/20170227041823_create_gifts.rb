@@ -4,6 +4,7 @@ class CreateGifts < ActiveRecord::Migration[5.0]
       column.string :name
       column.string :where_to_buy
       column.string :recipient
+      column.string :notes
       column.integer :user_id
     end
   end

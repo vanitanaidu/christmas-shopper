@@ -1,15 +1,36 @@
+#txtbox
+    {
+     font-size:18pt;
+     height:420px;
+     width:200px;
+    } or do this
+textarea { height: auto; }
 
 
 #leftContainer {
    float:left;
 }
 
-#rightContainer {
+#rightContainer   {
    float:right;
 }
 
+.capitalize {
+    text-transform: capitalize;
+  }
 
+  table {
+      border-collapse: collapse;
+  }
 
+  table, th, td {
+      border: 1px solid black;
+  }
+
+  th, td {
+    padding: 15px;
+    text-align: left;
+}
 
 body {
   font-family: 'Lato', arial, sans-serif;
