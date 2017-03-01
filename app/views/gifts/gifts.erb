@@ -1,11 +1,34 @@
-Welcome, <%= current_user.username %>
-<h1> Gifts</h1>
+<head>
 
+  <h2>Welcome, <%= current_user.username.capitalize %></h2>
+
+   <% if @gifts.count >= 2 %>
+  <h2> You have <%=@gifts.count%> gifts on your Christmas Gift List.</h2>
+   <% else %>
+    <h3>  You have <%=@gifts.count%> gift on your Christmas Gift List.</h3>
+             <% end %>
+
+             
+      <form action="/gifts/new" method="get">
+        <input type="submit" value="New Gift">
+      </form>
+
+          <br></br>
+
+
+
+
+</head>
+
+<body>
 
 <% @gifts.each.with_index(1) do |gift, index| %>
-    Gift <%=index%>:
-    <%= gift.name %>
-    <%= gift.where_to_buy %>
-    <%= gift.recipient %>
+    <a href="/gifts/<%=gift.id%>" STYLE="text-decoration: none" ><h2>Christmas Gift <%=index%>:</h2>
+   <h4> Gift Name: <%= gift.name.capitalize %></h4>
+  <h4> Buy From: <%= gift.where_to_buy.capitalize %></h4>
+   <h4> Recipient: <%= gift.recipient.capitalize %>  </h4>
     <br></br>
+    </a>
 <% end %>
+
+</body>

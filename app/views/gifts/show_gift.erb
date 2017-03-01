@@ -1,15 +1,34 @@
-<h1>Gifts</h1>
-<h2> <%= @gift.name %> </h2>
-<h2> <%= @gift.where_to_buy %> </h2>
-<h2> <%= @gift.recipient %> </h2>
+<body>
+
+<h3>Gift Name: <%= @gift.name.capitalize %> </h3>
+<h3>Buy From: <%= @gift.where_to_buy.capitalize %> </h3>
+<h3>Recipient: <%= @gift.recipient.capitalize %> </h3>
 
 
+<form action="/gifts/new" method="get">
+  <input type="submit" value="New Gift">
+</form>
+
+<form action="/gifts" method="get">
+  <input type="submit" value="My Gift List">
+</form>
+
+<div id="leftContainer">
   <form action="/gifts/<%=@gift.id%>/edit" method="get">
     <input type="submit" value="Edit Gift">
   </form>
+</div>
 
+<div id="rightContainer">
   <form action="/gifts/<%= @gift.id%>/delete" method="POST">
     <input type="hidden" id="hidden" name="_method" value="DELETE">
     <input type="submit" value="Delete Gift">
   </form>
 
+
+
+
+
+</div>
+
+</body>

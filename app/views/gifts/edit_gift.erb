@@ -1,14 +1,16 @@
+
+
 <form action="/gifts/<%=@gift.id%>" method="post">
 <input id="hidden" type="hidden" name="_method" value="patch">
 
 <label for="name">What's the gift? </label>
-<input type="text" id="name" name="name">
+<input type="text" id="name" name="name" value="<%= @gift.name %>">
 
 <label for="where_to_buy">Where to buy? </label>
-<input type="text" id="where_to_buy" name="where_to_buy">
+<input type="text" id="where_to_buy" name="where_to_buy" value="<%= @gift.where_to_buy %>">
 
 <label for="recipient">Who's getting it?</label>
-<input type="text" id="recipient" name="recipient">
+<input type="text" id="recipient" name="recipient" value="<%= @gift.recipient %>">
 
-  <input type="submit" value="Edit">
+  <input type="submit" value="Make the change">
 </form>

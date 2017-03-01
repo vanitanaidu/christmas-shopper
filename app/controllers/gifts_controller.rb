@@ -41,7 +41,7 @@ class GiftsController < ApplicationController
 
   get "/gifts/:id/edit" do
     if logged_in?
-      @gift = Gift.find_by_id(session[:user_id])
+      @gift = Gift.find_by_id(params[:id])
       erb :"gifts/edit_gift"
     else
       redirect to "/login"
@@ -50,7 +50,7 @@ class GiftsController < ApplicationController
 
   post "/gifts/:id" do
     if logged_in?
-     @gift = Gift.find_by_id(session[:user_id])
+     @gift = Gift.find_by_id(params[:id])
      @gift.name = params[:name]
      @gift.where_to_buy = params[:where_to_buy]
      @gift.recipient = params[:recipient]

@@ -1,12 +1,16 @@
-/*   
- * Template Name: Developer - Responsive Website Template for Developers
- * Version: 1.0
- * Author: 3rd Wave Media
- * Twitter: @3rdwave_themes
- * License: Creative Commons Attribution 3.0 License
- * Website: http://themes.3rdwavemedia.com/
-*/
-/* ======= Base ======= */
+
+
+#leftContainer {
+   float:left;
+}
+
+#rightContainer {
+   float:right;
+}
+
+
+
+
 body {
   font-family: 'Lato', arial, sans-serif;
   color: #434343;
@@ -25,13 +29,19 @@ h6 {
   font-weight: 700;
   color: #778492;
 }
+
+
 a {
   color: #3aaa64;
+  text-decoration: none;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
 }
+
+
+
 a:hover {
   text-decoration: underline;
   color: #5f6b77;
@@ -426,38 +436,8 @@ iframe {
   font-weight: 500;
 }
 /* Language Section */
-.languages .item {
-  margin-bottom: 15px;
-}
-.languages .item .title {
-  color: #778492;
-}
-.languages .item .level {
-  color: #999999;
-}
-.languages .item:last-child {
-  margin-bottom: 0;
-}
-.languages .item .fa {
-  color: #79d19a;
-}
-/* Blog Section */
-.blog .item {
-  margin-bottom: 30px;
-}
-.blog .item .title {
-  font-size: 18px;
-  line-height: 1.3;
-}
-.blog .item .title a {
-  color: #778492;
-}
-.blog .item .title a:hover {
-  color: #5f6b77;
-}
-.blog .item:last-child {
-  margin-bottom: 0;
-}
+
+
 /* List section */
 .list ul li {
   margin-bottom: 10px;
