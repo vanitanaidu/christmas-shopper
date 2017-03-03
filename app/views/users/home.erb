@@ -1,14 +1,20 @@
+<% if flash.has?(:error) %>
+<p><%= flash[:error] %></p>
+<% elsif flash.has?(:success) %>
+<p><%= flash[:success] %></p>
+<% end %>
 
-<h1>Welcome to Christmas Shopper</h1>
-<h4>Please sign up or log in to access your account</h4>
+<body>
 
-<div id="leftContainer">
-  <form action="/signup" method="get">
-    <input type="submit" value="Sign Up">
-  </form>
-</div>
+    <div class="welcome"> <h1>Welcome to Christmas Shopper</h1>
+                  Please sign up or log in to access your account         
 
-<div id="rightContainer">
-  <form action="/login" method="get">
-    <input type="submit" value="Log In">
-  </form>
+
+      <a href="/signup" class="signupbutton">Sign Up</a>
+
+      <a href="/login" class="loginbutton">Log In</a>
+
+    </div>
+
+
+  </body>

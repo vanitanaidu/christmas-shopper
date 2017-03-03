@@ -1,23 +1,32 @@
 
-<head>
-    <h4>Welcome, <%= current_user.username.capitalize %></h4>
-    <h2>Edit</h2>
-<br>
-</head>
-<form action="/gifts/<%=@gift.id%>" method="post">
-<input id="hidden" type="hidden" name="_method" value="patch">
-
-<label for="name">What's the gift? </label>
-<input type="text" id="name" name="name" value="<%= @gift.name %>">
-
-<label for="where_to_buy">Where to buy? </label>
-<input type="text" id="where_to_buy" name="where_to_buy" value="<%= @gift.where_to_buy %>">
-
-<label for="recipient">Who's getting it?</label>
-<input type="text" id="recipient" name="recipient" value="<%= @gift.recipient %>">
-
-  <textarea name="notes" rows="10" cols="50" placeholder="Notes"></textarea>
+    <head>
+        <div class="welcome-message">
+            <h4 class="capitalize">Welcome, <%= current_user.username %></h4>
+            <h2>Edit</h2>
+            <br>
+        </div>
+    </head>
 
 
-  <input type="submit" value="Make the change">
-</form>
+    <body>
+      <div class="creategift">
+
+      <form action="/gifts/<%=@gift.id%>" method="post">
+      <input id="hidden" type="hidden" name="_method" value="patch">
+
+      <label for="name">What's the gift? </label>
+      <input type="text" id="name" name="name" value="<%= @gift.name %>">
+
+      <label for="where_to_buy">Where to buy? </label>
+      <input type="text" id="where_to_buy" name="where_to_buy" value="<%= @gift.where_to_buy %>">
+
+      <label for="recipient">Who's getting it?</label>
+      <input type="text" id="recipient" name="recipient" value="<%= @gift.recipient %>">
+
+        <textarea name="notes" rows="10" cols="50" placeholder="Notes"></textarea>
+
+
+        <input type="submit" value="Make the change">
+      </form>
+    </div>
+    </body>

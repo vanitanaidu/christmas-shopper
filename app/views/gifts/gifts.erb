@@ -1,45 +1,62 @@
-<head>
+<html>
 
-  <h4>Welcome, <%= current_user.username.capitalize %></h4>
+<head>
+  <div class="welcome-message">
+
+  <h3 class="capitalize">Welcome, <%= current_user.username %></h3>
 
    <% if @gifts.count >= 2 %>
-  <h3> You have <%=@gifts.count%> gifts on your Christmas Gift List.</h3>
-   <% else %>
-    <h3>  You have <%=@gifts.count%> gift on your Christmas Gift List.</h3>
-             <% end %>
+    <h3> You have <%=@gifts.count%> gifts on your Christmas Gift List.</h3>
+     <% else %>
+        <h3>  You have <%=@gifts.count%> gift on your Christmas Gift List.</h3>
+    <% end %>
 
+<br>
+<br>
+</div>
 </head>
 
 <body>
-      <form action="/gifts/new" method="get">
-        <input type="submit" value="New Gift">
-      </form>
-
-<table>
-        <tr>
+    <table cellspacing="0" cellpadding="0" class="scrollTable">
+      <thead class="fixedHeader">
+        <tr class="alternateRow">
           <th colspan="10">Christmas Gifts</th>
         </tr>
+
         <tr>
-          <th>No</th>
+          <th>No. </th>
           <th>Gift Name </th>
           <th>Buy From </th>
           <th>Recipient </th>
           <th>Notes </th>
         </tr>
+      </thead>
 
-        <tr>
+      <tbody class="scrollContent">
+        <tr class="normalRow">
           <% @gifts.each.with_index(1) do |gift, index| %>
-          <a href="/gifts/<%=gift.id%>">
-          <td><%=index %></td>
-          <td><%= gift.name.capitalize %></td>
-          <td><%= gift.where_to_buy.capitalize %></td>
-          <td><%= gift.recipient.capitalize %></td>
-          <td><%= gift.notes %></td>
-        </a>
-        </tr>
-          <br></br>
 
-      <% end %>
+              <td><%=index %></td>
+              <td><a href="/gifts/<%=gift.id%>"> <%= gift.name.capitalize %> </a></td>
+              <td><a href="/gifts/<%=gift.id%>"> <%= gift.where_to_buy.capitalize %> </a></td>
+              <td><a href="/gifts/<%=gift.id%>"> <%= gift.recipient.capitalize %></a></td>
+              <td><a href="/gifts/<%=gift.id%>"> <%= gift.notes %> </a> </td>
+          </tr>
+
+          <% end %>
+            </div>
+    </tbody>
 </table>
-
+</div>
+  </div>
 </body>
+
+<footer>
+  <div class="footer">
+      <a href= "/logout" class="logout">Logout</a>
+      <a href= "/gifts/new" class="newgift">New Gift</a>
+    </div>
+</footer>
+
+
+</html>

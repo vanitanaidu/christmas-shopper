@@ -5,6 +5,7 @@ class GiftsController < ApplicationController
     if logged_in?
       erb :"gifts/gifts"
     else
+    flash[:error] = "Please log in"
     redirect to "/login"
     end
   end
@@ -13,6 +14,7 @@ class GiftsController < ApplicationController
     if logged_in?
     erb :"gifts/create_gift"
     else
+      flash[:error] = "Please log in"
     redirect to "/login"
     end
   end
@@ -22,8 +24,10 @@ class GiftsController < ApplicationController
       @gift = Gift.create(name: params[:name], where_to_buy: params[:where_to_buy], recipient: params[:recipient], notes: params[:notes])
       @gift.user_id = session[:user_id]
       @gift.save
+        flash[:success] = "You successfully created a new gift!"
       redirect to "/gifts/#{@gift.id}"
     else
+      flash[:error] = "Please make sure you fill in a gift name."
       redirect to "/gifts/new"
     end
   end
@@ -35,6 +39,7 @@ class GiftsController < ApplicationController
       @gift = Gift.find_by_id(params[:id])
       erb :"gifts/show_gift"
     else
+        flash[:error] = "Please log in"
       redirect to "/login"
     end
   end
@@ -44,6 +49,7 @@ class GiftsController < ApplicationController
       @gift = Gift.find_by_id(params[:id])
       erb :"gifts/edit_gift"
     else
+        flash[:error] = "Please log in"
       redirect to "/login"
     end
   end
@@ -57,8 +63,10 @@ class GiftsController < ApplicationController
      @gift.notes = params[:notes]
      @gift.user_id = session[:user_id]
      @gift.save
+     flash[:success] = "Your changes was successful!"
      redirect "/gifts/#{@gift.id}"
    else
+       flash[:error] = "Please log in"
      redirect to "/login"
    end
   end
@@ -67,8 +75,10 @@ class GiftsController < ApplicationController
   post "/gifts/:id/delete" do
     if logged_in?
       @gift = Gift.delete(params[:id])
+         flash[:success] = "Your gift has been deleted."
       redirect to '/gifts'
     else
+        flash[:error] = "Please log in"
       redirect to '/login'
     end
   end

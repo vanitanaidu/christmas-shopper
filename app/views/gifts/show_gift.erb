@@ -1,42 +1,27 @@
 
-<head>
-    <h4>Welcome, <%= current_user.username.capitalize %></h4>
-    <h2>Your Gift</h2>
-<br>
-</head>
+    <head>
+        <div class="welcome-message">
+          <h4>Welcome, <%= current_user.username.capitalize %></h4>
+          <h2>Your Gift</h2>
+          <br>
+        </div>
+    </head>
 
-<body>
+        <body>
 
-<h3>Gift Name: <%= @gift.name.capitalize %> </h3>
-<h3>Buy From: <%= @gift.where_to_buy.capitalize %> </h3>
-<h3>Recipient: <%= @gift.recipient.capitalize %> </h3>
-<h3> Notes: <%= @gift.notes %> </h3>
+            <h3>Gift Name: <%= @gift.name.capitalize %> </h3>
+            <h3>Buy From: <%= @gift.where_to_buy.capitalize %> </h3>
+            <h3>Recipient: <%= @gift.recipient.capitalize %> </h3>
+            <h3> Notes: <%= @gift.notes %> </h3>
 
+        </body>
 
-<form action="/gifts/new" method="get">
-  <input type="submit" value="New Gift">
-</form>
+        <footer>
 
-<form action="/gifts" method="get">
-  <input type="submit" value="My Gift List">
-</form>
+          <a href= "/logout" class="logout">Logout</a>
+          <a href= "/gifts/new" class="newgift">New Gift</a>
+          <a href= "/gifts" class="logout">My Gift List</a>
+          <a href= "/gifts/<%=@gift.id%>/edit" class="newgift">Edit Gift</a>
+          <a href= "/gifts/<%= @gift.id%>/delete" class="logout">Delete Gift</a>
 
-<div id="leftContainer">
-  <form action="/gifts/<%=@gift.id%>/edit" method="get">
-    <input type="submit" value="Edit Gift">
-  </form>
-</div>
-
-<div id="rightContainer">
-  <form action="/gifts/<%= @gift.id%>/delete" method="POST">
-    <input type="hidden" id="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Delete Gift">
-  </form>
-
-
-
-
-
-</div>
-
-</body>
+        <footer>

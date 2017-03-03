@@ -1,3 +1,10 @@
+<% if flash.has?(:error) %>
+<p><%= flash[:error] %></p>
+<% elsif flash.has?(:success) %>
+<p><%= flash[:success] %></p>
+<% end %>
+
+
 <html>
 
 <head>
