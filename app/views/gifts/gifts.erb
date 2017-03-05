@@ -1,9 +1,13 @@
-<html>
+
 
 <head>
-  <div class="welcome-message">
+  <div class="footer">
+      <a href= "/logout" class="logout">Logout</a>
+      <a href= "/gifts/new" class="newgift">New Gift</a>
+    </div>
 
-  <h3 class="capitalize">Welcome, <%= current_user.username %></h3>
+  <div class="welcome-message">
+  <h3 class="capitalize">Hi, <%= current_user.username %></h3>
 
    <% if @gifts.count >= 2 %>
     <h3> You have <%=@gifts.count%> gifts on your Christmas Gift List.</h3>
@@ -17,6 +21,8 @@
 </head>
 
 <body>
+
+
     <table cellspacing="0" cellpadding="0" class="scrollTable">
       <thead class="fixedHeader">
         <tr class="alternateRow">
@@ -33,7 +39,7 @@
       </thead>
 
       <tbody class="scrollContent">
-        <tr class="normalRow">
+        <tr class="normalRow" >
           <% @gifts.each.with_index(1) do |gift, index| %>
 
               <td><%=index %></td>
@@ -50,13 +56,3 @@
 </div>
   </div>
 </body>
-
-<footer>
-  <div class="footer">
-      <a href= "/logout" class="logout">Logout</a>
-      <a href= "/gifts/new" class="newgift">New Gift</a>
-    </div>
-</footer>
-
-
-</html>

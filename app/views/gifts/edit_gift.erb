@@ -1,20 +1,27 @@
 
     <head>
+
+        <a href= "/gifts" class="logout">My Gift List</a>
+        <a href= "/gifts/new" class="newgift">New Gift</a>
+        <a href= "/logout" class="logout">Logout</a>
+    </div>
+
         <div class="welcome-message">
-            <h4 class="capitalize">Welcome, <%= current_user.username %></h4>
-            <h2>Edit</h2>
+            <h3 class="capitalize">Hi, <%= current_user.username %></h3>
+            <h1>| Edit |</h1>
             <br>
         </div>
     </head>
 
 
     <body>
+
       <div class="creategift">
 
       <form action="/gifts/<%=@gift.id%>" method="post">
       <input id="hidden" type="hidden" name="_method" value="patch">
 
-      <label for="name">What's the gift? </label>
+      <label for="name">What's the gift?</label>
       <input type="text" id="name" name="name" value="<%= @gift.name %>">
 
       <label for="where_to_buy">Where to buy? </label>
@@ -23,10 +30,12 @@
       <label for="recipient">Who's getting it?</label>
       <input type="text" id="recipient" name="recipient" value="<%= @gift.recipient %>">
 
-        <textarea name="notes" rows="10" cols="50" placeholder="Notes"></textarea>
+      <br></br>
+
+        <textarea name="notes" rows="10" cols="50" ><%= @gift.notes %></textarea>
 
 
-        <input type="submit" value="Make the change">
+        <input type="submit" value="Submit">
       </form>
     </div>
     </body>

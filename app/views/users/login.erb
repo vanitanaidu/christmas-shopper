@@ -1,37 +1,21 @@
-<% if flash.has?(:error) %>
-<p><%= flash[:error] %></p>
-<% elsif flash.has?(:success) %>
-<p><%= flash[:success] %></p>
-<% end %>
+
+    <body>
+
+      <div class="login">
+      <h1>Log In Please</h1>
+        <br>
 
 
-<html>
+          <form method="post" action="/login">
 
-<head>
-<h1>Log In Please</h1>
-</head>
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username">
 
+              <label for="password"> Password</label>
+              <input type="text" id="password" name="password">
 
-<body>
+                <input type="submit" value="submit">
+            </form>
+      </div>
 
-<form method="post" action="/login">
-
-  <label for="username">Username</label>
-  <input type="text" id="username" name="username">
-
-  <label for="password">Password</label>
-  <input type="text" id="password" name="password">
-
-    <input type="submit" value="submit">
-
-
-</form>
-
-
-
-
-
-
-
-</body>
-</html>
+  </body>

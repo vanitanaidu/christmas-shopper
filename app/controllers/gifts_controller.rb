@@ -63,7 +63,7 @@ class GiftsController < ApplicationController
      @gift.notes = params[:notes]
      @gift.user_id = session[:user_id]
      @gift.save
-     flash[:success] = "Your changes was successful!"
+     flash[:success] = "Your changes were successful!"
      redirect "/gifts/#{@gift.id}"
    else
        flash[:error] = "Please log in"
@@ -71,8 +71,7 @@ class GiftsController < ApplicationController
    end
   end
 
-
-  post "/gifts/:id/delete" do
+  get "/gifts/:id/delete" do
     if logged_in?
       @gift = Gift.delete(params[:id])
          flash[:success] = "Your gift has been deleted."

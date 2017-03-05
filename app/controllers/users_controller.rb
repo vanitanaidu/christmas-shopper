@@ -1,14 +1,14 @@
 
 class UsersController < ApplicationController
 
-  get "/signup" do
-    if logged_in?
-        flash[:success] = "You are logged in"
-      redirect to "/gifts"
-    else
-      erb :'users/signup'
+    get "/signup" do
+      if logged_in?
+          flash[:success] = "You are logged in"
+        redirect to "/gifts"
+      else
+        erb :'users/signup'
+      end
     end
-  end
 
     post "/signup" do
       if params[:username].empty? || params[:email].empty? || params[:password].empty?
@@ -27,7 +27,6 @@ class UsersController < ApplicationController
       if !logged_in?
         erb :"users/login"
       else
-
         redirect to "/gifts"
       end
     end
@@ -44,10 +43,10 @@ class UsersController < ApplicationController
      end
    end
 
-  get '/logout' do
-    session.clear
-    flash[:success] = "See you next time!"
-    redirect to "/login"
-  end
+    get '/logout' do
+      session.clear
+      flash[:success] = "See you next time!"
+      redirect to "/login"
+    end
 
 end

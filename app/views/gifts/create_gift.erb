@@ -1,10 +1,16 @@
-<html>
+
 
   <head>
-    <div class="welcome-message">
-  <h4 class="capitalize"> Hey, <%= current_user.username %></h4>
+    <div class="footer">
 
-    <h2>Create your Gifts!</h2>
+      <a href= "/gifts" class="logout">My Gift List</a>
+      <a href= "/logout" class="logout">Logout</a>
+    </div>
+
+    <div class="welcome-message">
+      <h3 class="capitalize"> Hey, <%= current_user.username %></h3>
+
+      <h1>| Create |</h1>
   </div>
   </head>
 
@@ -32,5 +38,3 @@
   </div>
 
   </body>
-
- </html>

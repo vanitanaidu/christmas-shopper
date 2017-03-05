@@ -4,11 +4,11 @@
   .welcome {
   position: absolute;
   background: white;
-  width: 60%;
-  height: 25%;
+  width: 50%;
+  height: 20%;
   border: 1px solid black;
-  margin: 100px 10px 10px 250px;
-  padding: 20px
+  margin: 150px 10px 10px 300px;
+  padding: 40px
 
 }
 
@@ -25,6 +25,21 @@
     cursor: pointer;
     float: right;
   }
+
+/*----------- Login/Signup Page ----------*/
+
+.login, .signup {
+position: absolute;
+background: rgba(255, 255, 255, 0.8);
+border: 1px solid black;
+text-align: justify;
+width: 50%;
+height: 20%;
+margin: 150px 10px 10px 300px;
+padding: 40px;
+}
+
+
 
 
 /*----------- Gift Page ----------*/
@@ -54,51 +69,48 @@ padding: 20px;
   }
 
 .footer {
-position: relative;
-background-color: : transparent;
-width: 20%;
+position: absolute;
+background-color: transparent;
+width: 60%;
 height: 8%;
 padding: 20px;
-float: right;
-margin-right: 75px;
+margin: 1px 5px 350px 450px;
 }
 
 /*---------Create_Gift Page ----------*/
 
 .creategift {
 position: absolute;
-background: transparent;
-width: 70%;
-height: 50%;
-margin: 2px 10px 20px 250px;
+background: rgba(255, 255, 255, 0.8);
+border: 1px solid black;
+width: 60%;
+height: 30%;
+margin: 50px 10px 10px 250px;
+padding: 40px;
+}
+
+/*--------- Show Page ----------*/
+.showfooter {
+position: absolute;
+background-color: transparent;
+width: 60%;
+height: 8%;
 padding: 20px;
+margin: 1px 5px 350px 450px;
 }
 
-
-
-/*
-.loginbutton {
-
-
-}*/
-
-  /*.signup {
-  background:aqua;
-  width:25%;
-  height:60%;
-  border:1px dashed black;
-  margin:300px;
-
+.showgift {
+position: absolute;
+background: rgba(255, 255, 255, 0.7);
+border: 1px black;
+left: 35%;
+right: 0%;
+text-align: justify;
+width: 30%;
+height: 40%;
+margin: 2px 20px 20px 250px;
+padding: 60px;
 }
-
- .login {
-  background:aqua;
-  width:25%;
-  height:60%;
-  border:1px dashed black;
-  margin:300px;
-  float:right;
-}*/
 
 /*--------- Text ----------*/
 a {
@@ -112,7 +124,6 @@ a {
 
 textarea {
   height: auto;
-  
 }
 
 /*------- Table ----------*/
@@ -134,7 +145,7 @@ th, td {
 }
 
 table.scrollTable {
-  width: 90%;
+  width: 80%;
 }
 
 thead.fixedHeader {
@@ -152,7 +163,7 @@ thead.fixedHeader tr th {
 
 tbody.scrollContent {
   display: block;
-  height: 262px;
+  height: 350px;
   overflow: auto;
 }
 
@@ -167,22 +178,21 @@ tbody.scrollContent tr.alternateRow td {
 }
 
 thead.fixedHeader th {
-  width: 233px;
+  width: 209px;
 }
 
 thead.fixedHeader th:last-child {
-  width: 233px;
+  width: 230px;
 }
 
 tbody.scrollContent td {
   width: 233px;
 }
 
-
-
+/*------- Background Image ----------*/
 body {
 
-       background: url(../images/backgroundImage.jpg) no-repeat center center fixed;
+       background: url(../images/2.jpg) no-repeat center center fixed;
 
        background-size: cover; /* for IE9+, Safari 4.1+, Chrome 3.0+, Firefox 3.6+ */
        -webkit-background-size: cover; /* for Safari 3.0 - 4.0 , Chrome 1.0 - 3.0 */

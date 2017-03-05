@@ -1,27 +1,30 @@
 
     <head>
+
+        <a href= "/logout" class="logout">Logout</a>
+        <a href= "/gifts/<%= @gift.id%>/delete" class="logout">Delete Gift</a>
+        <a href= "/gifts/<%=@gift.id%>/edit" class="newgift">Edit Gift</a>
+        <a href= "/gifts/new" class="newgift">New Gift</a>
+        <a href= "/gifts" class="logout">My Gift List</a>
+    </div>
+
         <div class="welcome-message">
-          <h4>Welcome, <%= current_user.username.capitalize %></h4>
-          <h2>Your Gift</h2>
-          <br>
+          <h3>Hi, <%= current_user.username.capitalize %></h3>
+          <h1>| Your Gift |</h1>
         </div>
     </head>
 
         <body>
 
+          <div class="showgift">
+
             <h3>Gift Name: <%= @gift.name.capitalize %> </h3>
             <h3>Buy From: <%= @gift.where_to_buy.capitalize %> </h3>
             <h3>Recipient: <%= @gift.recipient.capitalize %> </h3>
             <h3> Notes: <%= @gift.notes %> </h3>
-
+          </div>
         </body>
 
         <footer>
-
-          <a href= "/logout" class="logout">Logout</a>
-          <a href= "/gifts/new" class="newgift">New Gift</a>
-          <a href= "/gifts" class="logout">My Gift List</a>
-          <a href= "/gifts/<%=@gift.id%>/edit" class="newgift">Edit Gift</a>
-          <a href= "/gifts/<%= @gift.id%>/delete" class="logout">Delete Gift</a>
 
         <footer>
