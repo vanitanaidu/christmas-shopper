@@ -35,11 +35,10 @@ class UsersController < ApplicationController
      user = User.find_by(:username => params[:username])
      if user && user.authenticate(params[:password])
        session[:user_id] = user.id
-         flash[:success] = "You are logged_in!"
        redirect to "/gifts"
      else
-         flash[:error] = "Please Sign Up."
-       redirect to '/signup'
+       flash[:error] = "Please check your login information."
+     redirect '/login'
      end
    end
 
