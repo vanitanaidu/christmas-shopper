@@ -2,7 +2,7 @@ class GiftsController < ApplicationController
 
   get "/gifts" do
     if logged_in?
-    @gifts = Gift.all
+    @gifts = current_user.gifts
       erb :"gifts/gifts"
     else
     flash[:error] = "Please log in"

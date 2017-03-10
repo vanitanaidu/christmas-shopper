@@ -32,12 +32,13 @@ class UsersController < ApplicationController
     end
 
     post '/login' do
-     user = User.find_by(:username => params[:username])
-     if user && user.authenticate(params[:password])
-       session[:user_id] = user.id
+     @user = User.find_by(:username => params[:username])
+     if @user && @user.authenticate(params[:password])
+       session[:user_id] = @user.id
+       @user.save
        redirect to "/gifts"
      else
-       flash[:error] = "Please check your login information."
+       flash[:error] = "Your login details were incorrect"
      redirect '/login'
      end
    end

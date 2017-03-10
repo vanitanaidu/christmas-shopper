@@ -1,16 +1,16 @@
 
 
 <head>
-  <div class="footer">
+    <div class="footer">
       <a href= "/logout" class="logout">Logout</a>
       <a href= "/gifts/new" class="newgift">New Gift</a>
     </div>
 
-  <div class="welcome-message">
-  <h3 class="capitalize">Hi, <%= current_user.username %></h3>
+    <div class="welcome-message">
+    <h3 class="capitalize">Hi, <%= current_user.username %></h3>
 
-   <% if @gifts.count >= 2 %>
-    <h3> You have <%=@gifts.count%> gifts on your Christmas Gift List.</h3>
+    <% if @gifts.count >= 2 %>
+      <h3> You have <%=@gifts.count%> gifts on your Christmas Gift List.</h3>
      <% else %>
         <h3>  You have <%=@gifts.count%> gift on your Christmas Gift List.</h3>
     <% end %>
