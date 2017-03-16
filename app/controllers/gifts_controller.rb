@@ -35,11 +35,14 @@ class GiftsController < ApplicationController
   get "/gifts/:id" do
 
     if logged_in?
-      # binding.pry
-      @gift = Gift.find_by_id(params[:id])
-      erb :"gifts/show_gift"
+      @gift = Gift.find_by(id: params[:id])
+      if @gift && @gift.user == current_user
+        erb :"gifts/show_gift"
+      else
+        redirect to "/gifts"
+      end
     else
-        flash[:error] = "Please log in"
+      flash[:error] = "Please log in"
       redirect to "/login"
     end
   end
@@ -47,9 +50,13 @@ class GiftsController < ApplicationController
   get "/gifts/:id/edit" do
     if logged_in?
       @gift = Gift.find_by_id(params[:id])
-      erb :"gifts/edit_gift"
+      if @gift && @gift.user == current_user
+        erb :"gifts/edit_gift"
+      else
+        redirect to "/gifts"
+      end
     else
-        flash[:error] = "Please log in"
+      flash[:error] = "Please log in"
       redirect to "/login"
     end
   end
