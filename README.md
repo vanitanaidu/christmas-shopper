@@ -9,3 +9,6 @@
   3. Run `rake db:migrate`
   4. Run `shotgun`
   5. Click the link given for the IP address or localhost to start exploring Christmas Shopper
+
+
+  Blog: http://vanitanaidueckert.com/2017/01/25/everybody_loves_ruby/
