@@ -8,24 +8,25 @@
 
     <div class="welcome-message">
     <h3 class="capitalize">Hi, <%= current_user.username %></h3>
-
+    <br>
     <% if @gifts.count >= 2 %>
       <h3> You have <%=@gifts.count%> gifts on your Christmas Gift List.</h3>
      <% else %>
-        <h3>  You have <%=@gifts.count%> gift on your Christmas Gift List.</h3>
+        <h3> You have <%=@gifts.count%> gift on your Christmas Gift List.</h3>
     <% end %>
 
-<br>
-<br>
+</br>
+
 </div>
 </head>
 
 <body>
-
-
-    <table cellspacing="0" cellpadding="0" class="scrollTable">
-      <thead class="fixedHeader">
-        <tr class="alternateRow">
+<br></br>
+<br></br>
+<div class="container">
+    <table class="table table-hover">
+      <thead>
+        <tr>
           <th colspan="10">Christmas Gifts</th>
         </tr>
 
@@ -38,21 +39,25 @@
         </tr>
       </thead>
 
-      <tbody class="scrollContent">
-        <tr class="normalRow" >
-          <% @gifts.each.with_index(1) do |gift, index| %>
+      <tbody>
+        <tr>
+          <% if @gifts.length > 0 %>
+            <% @gifts.each.with_index(1) do |gift, index| %>
 
               <td><%=index %></td>
               <td><a href="/gifts/<%=gift.id%>"> <%= gift.name.capitalize %> </a></td>
               <td><a href="/gifts/<%=gift.id%>"> <%= gift.where_to_buy.capitalize %> </a></td>
               <td><a href="/gifts/<%=gift.id%>"> <%= gift.recipient.capitalize %></a></td>
               <td><a href="/gifts/<%=gift.id%>"> <%= gift.notes %> </a> </td>
-          </tr>
-
+        </tr>
+            <% end %>
           <% end %>
+
             </div>
-    </tbody>
-</table>
+
+      </tbody>
+    </table>
+  </div>
 </div>
   </div>
 </body>

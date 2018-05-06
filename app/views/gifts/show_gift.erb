@@ -18,11 +18,17 @@
 
           <div class="showgift">
 
-            <h3>Gift Name: <%= @gift.name.capitalize %> </h3>
-            <h3>Buy From : <%= @gift.where_to_buy.capitalize %> </h3>
-            <h3>Recipient: <%= @gift.recipient.capitalize %> </h3>
-            <h3> Notes: <%= @gift.notes %> </h3>
+            <h5><b>Gift Name:</b><%= @gift.name.capitalize %> </h5>
+            <h5><b>Buy From:</b><%= @gift.where_to_buy.capitalize %> </h5>
+            <h5><b>Recipient:</b><%= @gift.recipient.capitalize %> </h5>
+            </br>
+            <h5><b>Notes:</b>
+              <br></br>
+              <%= @gift.notes %>
+            </h5>
+
           </div>
+
         </body>
 
         <footer>

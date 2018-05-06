@@ -18,24 +18,24 @@
 
       <div class="creategift">
 
-      <form action="/gifts/<%=@gift.id%>" method="post">
-      <input id="hidden" type="hidden" name="_method" value="patch">
+        <form action="/gifts/<%=@gift.id%>" method="post">
 
-      <label for="name">What's the gift?</label>
-      <input type="text" id="name" name="name" value="<%= @gift.name %>">
+          <input id="hidden" type="hidden" name="_method" value="patch">
 
-      <label for="where_to_buy">Where to buy? </label>
-      <input type="text" id="where_to_buy" name="where_to_buy" value="<%= @gift.where_to_buy %>">
+          <label for="name">What's the gift?</label>
+          <input type="text" id="name" name="name" value="<%= @gift.name %>">
+          </br></br>
+          <label for="where_to_buy">Where to buy? </label>
+          <input type="text" id="where_to_buy" name="where_to_buy" value="<%= @gift.where_to_buy %>">
+          </br></br>
+          <label for="recipient">Who's getting it?</label>
+          <input type="text" id="recipient" name="recipient" value="<%= @gift.recipient %>">
+          <br></br>
+            <textarea class="notes-box" name="notes" rows="10" cols="50" ><%= @gift.notes %></textarea>
+            <input class="submitbutton" type="submit" value="Submit">
 
-      <label for="recipient">Who's getting it?</label>
-      <input type="text" id="recipient" name="recipient" value="<%= @gift.recipient %>">
+        </form>
 
-      <br></br>
+      </div>
 
-        <textarea name="notes" rows="10" cols="50" ><%= @gift.notes %></textarea>
-
-
-        <input type="submit" value="Submit">
-      </form>
-    </div>
     </body>
