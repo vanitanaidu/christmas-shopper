@@ -1,4 +1,4 @@
-gitrequire './config/environment'
+git require './config/environment'
 
 class ApplicationController < Sinatra::Base
 
