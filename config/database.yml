@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  database: christmas_shopper_development
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: postgresql
+  database: christmas_shopper_test
+  pool: 5
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  database: christmas_shopper_production
+  pool: 5
+  timeout: 5000
