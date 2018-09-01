@@ -1,17 +1,43 @@
 
 /*----------- Home Page ----------*/
 
-.welcome {
+div.welcome {
   position: absolute;
   background: white;
-  width: 50%;
-  height: 20%;
-  border: 4px solid black;
-  margin: 150px 10px 10px 300px;
-  padding: 40px
+  width: auto;
+  height: auto;
+  border: 3px solid #555555;
+  margin: 15% 10% 20% 25%;
+  padding: 4%;
 }
 
-.signupbutton, .loginbutton, .newgift {
+.signupbutton, .loginbutton {
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+  display: block;
+  position: relative;
+}
+
+.signupbutton {
+  background-color: #BEBEBE;
+  color: black;
+  margin-right: 3em;
+  margin-top: 1.5em;
+  margin-left: 3em;
+}
+
+.loginbutton {
+  background-color: #c65353;
+  color: white;
+  margin-right: 3em;
+  margin-top: 1em;
+  margin-left: 3em;
+
+}
+
+/*.newgift {
   background-color: #555555;
   border: none;
   color: white;
@@ -22,19 +48,19 @@
   margin-right: 20px;
   cursor: pointer;
   float: right;
-}
+}*/
 
 /*----------- Login/Signup Page ----------*/
 
 .login, .signup {
   position: absolute;
   background: rgba(255, 255, 255, 255);
-  border: 4px solid black;
+  border: 3px solid #555555;
   text-align: justify;
   width: 50%;
-  height: 45%;
-  margin: 150px 10px 10px 300px;
-  padding: 40px;
+  height: auto;
+  margin: 15% 10% 20% 25%;
+  padding: 4%;
 }
 
 .signupinput, .logininput {
@@ -66,8 +92,9 @@
   text-align: center;
   /*text-decoration: none;*/
   display: inline-block;
-  font-size: 16px;
-  margin-right: 20px;
+  font-size: 1em;
+  margin-right: 1.25em;
+  margin-top: 0.6em;
   cursor: pointer;
   float: right;
 }
@@ -83,10 +110,10 @@
 
 /*---------Create_Gift Page ----------*/
 
-.creategift {
+div.creategift {
   position: absolute;
   background: rgba(255, 255, 255, 0.9);
-  border: 4px solid black;
+  border: 3px solid #555555;
   width: 810px;
   height: auto;
   margin: 50px 10px 10px 250px;
@@ -102,8 +129,9 @@
   right: 5px;
   bottom: 5px;
   margin-left: 420px;
-
 }
+
+
 
 /*--------- Show Page ----------*/
 
@@ -119,20 +147,24 @@
 .showgift {
   position: absolute;
   background: rgba(255, 255, 255, 0.9);
-  border: 4px solid black;
-  top: 25%;
-  left: 35%;
+  border: 3px solid #555555;
+  top: 30%;
+  left: 20%;
   right: 65%;
   text-align: justify;
-  width: 46%;
+  width: 50%;
   height: auto;
-  margin: 20px 20px 20px 95px;
-  padding: 30px;
+  margin: 30px 20px 20px 95px;
+  padding: 1.87em;
   text-align: justify;
 }
 
 .showgift h5 b {
-  padding-right: 50px;
+  padding-right: 3.12em;
+}
+
+.nav-buttons{
+  margin-top: 1.87em;
 }
 
 /*--------- Text ----------*/
@@ -159,19 +191,25 @@ input, textarea {
     bottom: 5px;
     margin-left: 350px;
     margin-top: 40px;
-
 }*/
 
 /*------- Table ----------*/
 
-table, th, td {
-  background: rgba(255, 255, 255, 0.9);
-  margin-top: 20px;
+.table-header {
+  font-size: 1em;
+  background-color: white;
+}
+
+th, td {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-top: 30px;
 }
 
 td a {
   color: black;
 }
+
+
 /*------- Background Image ----------*/
 body {
   background: url(../images/barn.jpg) no-repeat center center fixed;
@@ -181,4 +219,15 @@ body {
   -o-background-size: cover; /* for Opera 9.5 */
   margin: 0; /* to remove the default white margin of body */
   padding-top: 0; /* to remove the default white margin of body */
+}
+
+
+/*-------Text ----------*/
+
+h1 {
+  font-size: 1em;
+}
+
+label {
+font-size: 1.2em;
 }

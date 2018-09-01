@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170227041823) do
+ActiveRecord::Schema.define(version: 2017_02_27_041823) do
 
   create_table "gifts", force: :cascade do |t|
-    t.string  "name"
-    t.string  "where_to_buy"
-    t.string  "recipient"
-    t.string  "notes"
+    t.string "name"
+    t.string "where_to_buy"
+    t.string "recipient"
+    t.string "notes"
     t.integer "user_id"
   end
 

@@ -10,7 +10,7 @@
 #
 #
 #
-# require 'rack-flash'
+
 # require_all 'app'
 
 
@@ -41,4 +41,5 @@ configure :production do
   )
 end
 
+require 'rack-flash'
 require_all 'app'

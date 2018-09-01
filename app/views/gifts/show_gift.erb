@@ -1,15 +1,16 @@
 
     <head>
-
+      <div class="nav-buttons">
         <a href= "/logout" class="logout">Logout</a>
         <a href= "/gifts/<%= @gift.id%>/delete" class="logout">Delete Gift</a>
         <a href= "/gifts/<%=@gift.id%>/edit" class="newgift">Edit Gift</a>
         <a href= "/gifts/new" class="newgift">New Gift</a>
         <a href= "/gifts" class="logout">My Gift List</a>
-    </div>
+      </div>
 
         <div class="welcome-message">
-          <h3>Hi, <%= current_user.username.capitalize %></h3>
+          <h4>Hi, <%= current_user.username.capitalize %></h4>
+          <br>
           <h1>| Your Gift |</h1>
         </div>
     </head>
